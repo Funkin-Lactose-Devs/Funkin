@@ -551,7 +551,7 @@ class FreeplayState extends MusicBeatSubState
       grpTxtScrolls.visible = true;
 
       // render optimisation
-      _parentState.persistentDraw = false;
+      if (_parentState != null) _parentState.persistentDraw = false;
     });
 
     generateSongList(null, false);
